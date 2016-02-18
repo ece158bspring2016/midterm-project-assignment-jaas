@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		2CB31CFD1C760FAD006D044B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB31CFC1C760FAD006D044B /* AppDelegate.swift */; };
-		2CB31CFF1C760FAD006D044B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB31CFE1C760FAD006D044B /* ViewController.swift */; };
 		2CB31D021C760FAD006D044B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CB31D001C760FAD006D044B /* Main.storyboard */; };
 		2CB31D041C760FAD006D044B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CB31D031C760FAD006D044B /* Assets.xcassets */; };
 		2CB31D071C760FAD006D044B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CB31D051C760FAD006D044B /* LaunchScreen.storyboard */; };
 		2CB31D121C760FAD006D044B /* OneHourWalkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB31D111C760FAD006D044B /* OneHourWalkerTests.swift */; };
 		2CB31D1D1C760FAD006D044B /* OneHourWalkerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB31D1C1C760FAD006D044B /* OneHourWalkerUITests.swift */; };
+		2CB31D301C76112A006D044B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB31D2F1C76112A006D044B /* Constants.swift */; };
+		2CB31D321C76113E006D044B /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB31D311C76113E006D044B /* DataService.swift */; };
+		2CB31D341C761179006D044B /* Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB31D331C761179006D044B /* Distance.swift */; };
+		2CB31D361C7611A8006D044B /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB31D351C7611A8006D044B /* TimerViewController.swift */; };
+		2CB31D381C761905006D044B /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB31D371C761905006D044B /* CustomView.swift */; };
+		2CB31D3A1C762204006D044B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB31D391C762204006D044B /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +41,6 @@
 /* Begin PBXFileReference section */
 		2CB31CF91C760FAD006D044B /* OneHourWalker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneHourWalker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB31CFC1C760FAD006D044B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2CB31CFE1C760FAD006D044B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2CB31D011C760FAD006D044B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2CB31D031C760FAD006D044B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CB31D061C760FAD006D044B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,12 @@
 		2CB31D181C760FAD006D044B /* OneHourWalkerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneHourWalkerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB31D1C1C760FAD006D044B /* OneHourWalkerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneHourWalkerUITests.swift; sourceTree = "<group>"; };
 		2CB31D1E1C760FAD006D044B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CB31D2F1C76112A006D044B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2CB31D311C76113E006D044B /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		2CB31D331C761179006D044B /* Distance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Distance.swift; sourceTree = "<group>"; };
+		2CB31D351C7611A8006D044B /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		2CB31D371C761905006D044B /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		2CB31D391C762204006D044B /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +107,12 @@
 		2CB31CFB1C760FAD006D044B /* OneHourWalker */ = {
 			isa = PBXGroup;
 			children = (
+				2CB31D2E1C7610F3006D044B /* Utility */,
+				2CB31D2A1C761092006D044B /* Service */,
+				2CB31D2B1C7610A7006D044B /* Model */,
+				2CB31D2D1C7610C2006D044B /* Controller */,
+				2CB31D2C1C7610B9006D044B /* View */,
 				2CB31CFC1C760FAD006D044B /* AppDelegate.swift */,
-				2CB31CFE1C760FAD006D044B /* ViewController.swift */,
 				2CB31D001C760FAD006D044B /* Main.storyboard */,
 				2CB31D031C760FAD006D044B /* Assets.xcassets */,
 				2CB31D051C760FAD006D044B /* LaunchScreen.storyboard */,
@@ -123,6 +137,47 @@
 				2CB31D1E1C760FAD006D044B /* Info.plist */,
 			);
 			path = OneHourWalkerUITests;
+			sourceTree = "<group>";
+		};
+		2CB31D2A1C761092006D044B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2CB31D311C76113E006D044B /* DataService.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		2CB31D2B1C7610A7006D044B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2CB31D331C761179006D044B /* Distance.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2CB31D2C1C7610B9006D044B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2CB31D371C761905006D044B /* CustomView.swift */,
+				2CB31D391C762204006D044B /* CustomButton.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2CB31D2D1C7610C2006D044B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2CB31D351C7611A8006D044B /* TimerViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2CB31D2E1C7610F3006D044B /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				2CB31D2F1C76112A006D044B /* Constants.swift */,
+			);
+			name = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +311,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CB31CFF1C760FAD006D044B /* ViewController.swift in Sources */,
 				2CB31CFD1C760FAD006D044B /* AppDelegate.swift in Sources */,
+				2CB31D301C76112A006D044B /* Constants.swift in Sources */,
+				2CB31D321C76113E006D044B /* DataService.swift in Sources */,
+				2CB31D381C761905006D044B /* CustomView.swift in Sources */,
+				2CB31D3A1C762204006D044B /* CustomButton.swift in Sources */,
+				2CB31D361C7611A8006D044B /* TimerViewController.swift in Sources */,
+				2CB31D341C761179006D044B /* Distance.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
