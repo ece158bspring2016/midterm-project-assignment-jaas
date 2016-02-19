@@ -31,7 +31,6 @@ class TimerViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.delegate = self
 //            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
-//            locationManager.startUpdatingLocation()
             
             distanceTraveled = 0.0
             currentLocation = nil
