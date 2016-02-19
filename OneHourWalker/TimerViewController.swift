@@ -45,6 +45,7 @@ class TimerViewController: UIViewController {
     func updateTime() {
         let currentTime = NSDate.timeIntervalSinceReferenceDate()
         
+        //
         //Find the difference between current time and start time.
         var elapsedTime: NSTimeInterval = currentTime - zeroTime
         
