@@ -7,19 +7,46 @@
 //
 
 import UIKit
+import CoreLocation
 
-class TimerViewController: UIViewController {
+class TimerViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var milesLabel: UILabel!
     
     var zeroTime = NSTimeInterval()
-    
     var timer : NSTimer = NSTimer()
+    
+    let locationManager = CLLocationManager()
+    var currentLocation: CLLocation!
+    var lastLocation: CLLocation!
+    var distanceTraveled = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        locationManager.requestWhenInUseAuthorization();
+        
+        if CLLocationManager.locationServicesEnabled(){
+            locationManager.delegate = self
+//            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+//            locationManager.startUpdatingLocation()
+            
+            distanceTraveled = 0.0
+            currentLocation = nil
+            lastLocation = nil
+            
+        }
+        else {
+            print("Location service disabled");
+        }
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        locationManager.stopUpdatingLocation()
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,14 +59,25 @@ class TimerViewController: UIViewController {
             let aSelector : Selector = "updateTime"
             timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
             zeroTime = NSDate.timeIntervalSinceReferenceDate()
+            
+            distanceTraveled = 0.0
+            currentLocation = nil
+            lastLocation = nil
+            
+            locationManager.startUpdatingLocation()
         }
     }
     
     @IBAction func stopTimer(sender: AnyObject) {
         timer.invalidate()
+        locationManager.stopUpdatingLocation()
+        distanceTraveled = 0.0
+        currentLocation = nil
+        lastLocation = nil
     }
     
-    @IBAction func resetTimer(sender: AnyObject) {
+    @IBAction func share(sender: AnyObject) {
+        
     }
     
     func updateTime() {
@@ -71,7 +109,30 @@ class TimerViewController: UIViewController {
         
         if timerLabel.text == "60:00:00" {
             timer.invalidate()
+            locationManager.stopUpdatingLocation()
         }
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if currentLocation == nil {
+            currentLocation = locations.first as CLLocation!
+            lastLocation = locations.last as CLLocation!
+        } else {
+            let distance = currentLocation.distanceFromLocation(locations.last as CLLocation!)
+            let lastDistance = lastLocation.distanceFromLocation(locations.last as CLLocation!)
+            distanceTraveled += lastDistance * 0.000621371
+            
+            let trimmedDistance = String(format: "%.2f", distanceTraveled)
+            
+            print( "\(currentLocation)")
+            print( "\(locations.last!)")
+            print("FULL DISTANCE: \(trimmedDistance)")
+//            print("FULL DISTANCE MILES: \(distanceTraveled)")
+            print("STRAIGHT DISTANCE: \(distance)")
+            
+            milesLabel.text = "\(trimmedDistance) Miles"
+        }
+        lastLocation = locations.last as CLLocation!
     }
 
 }

@@ -79,11 +79,11 @@
                                     <constraint firstAttribute="width" constant="113" id="CZh-lw-A6j"/>
                                     <constraint firstAttribute="height" constant="48" id="wmM-1H-KY3"/>
                                 </constraints>
-                                <state key="normal" title="Reset">
+                                <state key="normal" title="Share">
                                     <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="resetTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X9O-t8-1TC"/>
+                                    <action selector="share:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zra-tf-DVZ"/>
                                 </connections>
                             </button>
                         </subviews>

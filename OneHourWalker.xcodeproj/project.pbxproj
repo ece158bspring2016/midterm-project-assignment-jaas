@@ -19,6 +19,7 @@
 		2CB31D361C7611A8006D044B /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB31D351C7611A8006D044B /* TimerViewController.swift */; };
 		2CB31D381C761905006D044B /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB31D371C761905006D044B /* CustomView.swift */; };
 		2CB31D3A1C762204006D044B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB31D391C762204006D044B /* CustomButton.swift */; };
+		2CB31D3C1C77637D006D044B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB31D3B1C77637D006D044B /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		2CB31D351C7611A8006D044B /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		2CB31D371C761905006D044B /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		2CB31D391C762204006D044B /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		2CB31D3B1C77637D006D044B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CB31D3C1C77637D006D044B /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +90,7 @@
 		2CB31CF01C760FAC006D044B = {
 			isa = PBXGroup;
 			children = (
+				2CB31D3B1C77637D006D044B /* CoreLocation.framework */,
 				2CB31CFB1C760FAD006D044B /* OneHourWalker */,
 				2CB31D101C760FAD006D044B /* OneHourWalkerTests */,
 				2CB31D1B1C760FAD006D044B /* OneHourWalkerUITests */,
@@ -542,6 +546,7 @@
 				2CB31D231C760FAD006D044B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2CB31D241C760FAD006D044B /* Build configuration list for PBXNativeTarget "OneHourWalkerTests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +555,7 @@
 				2CB31D261C760FAD006D044B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2CB31D271C760FAD006D044B /* Build configuration list for PBXNativeTarget "OneHourWalkerUITests" */ = {
 			isa = XCConfigurationList;
@@ -558,6 +564,7 @@
 				2CB31D291C760FAD006D044B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
