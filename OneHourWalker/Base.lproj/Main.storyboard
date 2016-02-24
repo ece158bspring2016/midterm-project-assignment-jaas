@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Timer View Controller-->
@@ -86,13 +87,25 @@
                                     <action selector="share:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zra-tf-DVZ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YrR-Ti-pGA">
+                                <rect key="frame" x="20" y="397" width="560" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="a7z-ad-tsz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="yjr-Zl-GdU" firstAttribute="top" secondItem="bnF-fa-9lO" secondAttribute="bottom" constant="8" id="E46-Fx-3kE"/>
                             <constraint firstItem="dTg-Uh-lDt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KSQ-Rx-Lb4"/>
+                            <constraint firstItem="YrR-Ti-pGA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="S9v-u7-QmC"/>
                             <constraint firstItem="6XY-eo-Awp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U58-nQ-mGh"/>
+                            <constraint firstItem="YrR-Ti-pGA" firstAttribute="top" secondItem="4cv-9b-rij" secondAttribute="bottom" constant="8" id="XoE-CZ-F7U"/>
                             <constraint firstItem="dTg-Uh-lDt" firstAttribute="top" secondItem="yjr-Zl-GdU" secondAttribute="bottom" constant="8" id="agZ-yS-3B3"/>
+                            <constraint firstItem="YrR-Ti-pGA" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="c8l-zU-P49"/>
                             <constraint firstItem="yjr-Zl-GdU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d8o-ZU-pPE"/>
                             <constraint firstItem="4cv-9b-rij" firstAttribute="top" secondItem="6XY-eo-Awp" secondAttribute="bottom" constant="8" id="drx-ve-KSh"/>
                             <constraint firstItem="6XY-eo-Awp" firstAttribute="top" secondItem="dTg-Uh-lDt" secondAttribute="bottom" constant="8" id="qVa-9w-DU5"/>
@@ -102,6 +115,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="heightLabel" destination="YrR-Ti-pGA" id="A9z-sb-8OT"/>
                         <outlet property="milesLabel" destination="yjr-Zl-GdU" id="VX2-5F-r3M"/>
                         <outlet property="timerLabel" destination="iwP-JB-PfC" id="cWb-6c-RXb"/>
                     </connections>
