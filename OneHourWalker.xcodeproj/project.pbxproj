@@ -18,6 +18,7 @@
 		2CB31D381C761905006D044B /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB31D371C761905006D044B /* CustomView.swift */; };
 		2CB31D3A1C762204006D044B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB31D391C762204006D044B /* CustomButton.swift */; };
 		2CB31D3C1C77637D006D044B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB31D3B1C77637D006D044B /* CoreLocation.framework */; };
+		E166BBEB1CD2D7760015D5D4 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E166BBEA1CD2D7760015D5D4 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		2CB31D371C761905006D044B /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		2CB31D391C762204006D044B /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		2CB31D3B1C77637D006D044B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E166BBAC1CD1ADEC0015D5D4 /* OneHourWalker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = OneHourWalker.entitlements; sourceTree = "<group>"; };
+		E166BBEA1CD2D7760015D5D4 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CB31D3C1C77637D006D044B /* CoreLocation.framework in Frameworks */,
+				E166BBEB1CD2D7760015D5D4 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +98,7 @@
 		2CB31CF01C760FAC006D044B = {
 			isa = PBXGroup;
 			children = (
+				E166BBEA1CD2D7760015D5D4 /* HealthKit.framework */,
 				2CB31D3B1C77637D006D044B /* CoreLocation.framework */,
 				2CB31CFB1C760FAD006D044B /* OneHourWalker */,
 				2CB31D101C760FAD006D044B /* OneHourWalkerTests */,
@@ -115,6 +120,7 @@
 		2CB31CFB1C760FAD006D044B /* OneHourWalker */ = {
 			isa = PBXGroup;
 			children = (
+				E166BBAC1CD1ADEC0015D5D4 /* OneHourWalker.entitlements */,
 				2C5F67A51C7D5343008410B5 /* Manager */,
 				2CB31D2D1C7610C2006D044B /* Controller */,
 				2CB31D2C1C7610B9006D044B /* View */,
@@ -230,6 +236,12 @@
 				TargetAttributes = {
 					2CB31CF81C760FAC006D044B = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = PNU7AS5372;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					2CB31D0C1C760FAD006D044B = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -437,10 +449,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OneHourWalker/OneHourWalker.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = OneHourWalker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gommmd.OneHourWalker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gommmd.OneHourWalker500;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -448,10 +464,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OneHourWalker/OneHourWalker.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = OneHourWalker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gommmd.OneHourWalker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gommmd.OneHourWalker500;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
